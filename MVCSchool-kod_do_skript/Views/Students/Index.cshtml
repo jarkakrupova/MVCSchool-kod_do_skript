@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Student>
+<h1>List of all students</h1>
+<a class="btn btn-info" asp-action="Load">Load XML</a>
+@*<form method="post" enctype="multipart/form-data" asp-action="UploadFile">
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Upload one or more files using this form:</p>
+            <input type="file" name="files" multiple />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="submit" value="Upload" />
+        </div>
+    </div>
+</form>*@
+
+@foreach (var item in Model) {
+    <div class="border border-1 border-dark p-2 ">
+        <h5>@item.FirstName @item.LastName</h5>
+        Id: @item.Id
+        <p>Date of Birth: "@item.DateOfBirth.ToShortDateString()"</p>
+        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+    </div>
+}
+<hr />
+<div>
+    <a class="btn btn-success" asp-action="Create">Create</a>
+</div>
+

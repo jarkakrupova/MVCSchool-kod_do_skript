@@ -1,0 +1,23 @@
+﻿@using MVCSchool_kod_do_skript.ViewModels;
+@model GradesViewModel
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="StudentId" class="control-label"></label>
+        <select asp-for="StudentId" class="form-control" asp-items="ViewBag.Students"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="SubjectId" class="control-label"></label>
+        <select asp-for="SubjectId" class="form-control" asp-items="ViewBag.Subjects"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="What"></label>
+        <input type="text" asp-for="What" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Mark"></label>
+        <input type="number" asp-for="Mark" class="form-control" />
+    </div>
+    <div>
+        <input class="btn btn-success" type="submit" value="Create" />
+    </div>
+</form>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MVCSchool-kod_do_skript.props" />
+</Project>

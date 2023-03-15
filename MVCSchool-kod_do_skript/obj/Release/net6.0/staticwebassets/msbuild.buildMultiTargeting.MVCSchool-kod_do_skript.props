@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MVCSchool-kod_do_skript.props" />
+</Project>

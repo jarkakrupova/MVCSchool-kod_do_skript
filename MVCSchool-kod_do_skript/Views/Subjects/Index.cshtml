@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Subject>
+<h1>List of all subjects</h1>
+@foreach (var item in Model) {
+    <div class="border border-1 border-dark p-2 ">
+        <h5>@item.Name</h5>
+        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+    </div>
+}
+<div>
+    <a class="btn btn-success" asp-action="Create">Create</a>
+</div>
